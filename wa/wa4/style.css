@@ -10,7 +10,7 @@ body {
 
 h1 {
     font-size: 48px;
-    color: #623F30;
+    color: #34643D;
 }
 
 h2 {
@@ -19,6 +19,7 @@ h2 {
 
 h3 {
     font-size: 24px;
+    color:#664C75
 }
 
 p {
@@ -41,10 +42,22 @@ a:hover {
 
 a:visited {
     text-decoration: none;
-    color: #34643D;
+    color: #623F30;
 }
 
 a:visited:hover {
     text-decoration: underline;
     color: #B79FEB;
+}
+
+.center-elements {
+    text-align: center;
+}
+
+a:link {
+    text-decoration: underline;
+}
+
+.image-size {
+    height: 400px
 }
