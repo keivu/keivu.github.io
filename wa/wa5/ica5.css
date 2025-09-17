@@ -1,0 +1,55 @@
+.card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+p {
+    font-size: 16pt;
+}
+
+button {
+    height: 2.5rem;
+    width: 8rem;
+    border-radius: 30%;
+    font-size: 20pt;
+}
+
+button:hover {
+    background-color: rgb(128, 128, 128);
+}
+
+.card-content {
+    display: none;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    border-style: solid;
+    border-width: medium;
+    border-color: navy;
+}
+
+
+/* in console
+single elements  
+    const button = document.querySelector('.menu-button'); (# for ids)
+
+multiple elements
+    const cards = document.querySelectorAll('.card');
+
+changing text
+    header.textContent = "..."
+
+chnaging HTML
+    element.innterHTML
+
+button.addEventListener('click', function () { */
+
