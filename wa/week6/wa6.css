@@ -1,0 +1,103 @@
+/* @media screen and (max-width: 768px) {
+
+    elements change
+}
+*/
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: beige;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2vw;
+}
+
+.nav-toggle {
+    display: none;
+    padding: .5em
+}
+
+.nav-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav-burger-menu {
+    display: none;
+}
+
+.nav-expand-button {
+    border-color: transparent;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    display: none;
+}
+
+.nav-expand-button:hover {
+    background-color: lightblue;
+    background-blend-mode: color;
+}
+
+
+
+a:hover {
+    color: darkmagenta;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.info-card { 
+    flex: 1 1 300px; 
+    height: 200px;
+    border: 2px black solid;
+}
+
+@media (max-width: 768px) {
+    
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-burger-menu {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+
+    }
+
+    .nav-expand-button {
+        display: flex;
+    }
+    
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+        background: none;
+        border: none;
+        padding: 0;
+    }
+    .nav-toggle span {
+        display: block;
+        height: 3px;
+        background-color: #333;
+        border-radius: 2px;
+    }
+
+    .nav-toggle:hover {
+        cursor: grab;
+    }
+}
+
+/* part 3 critical reflection 150 words */
