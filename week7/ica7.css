@@ -18,13 +18,15 @@ body {
     grid-area: main-bar;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 10%;
     align-items: center;
     padding: 1rem;
     background: #025FA2;
 }
 
 .org-name {
+    font-size: 24pt;
     color: #FA9EC4
 }
 
@@ -43,8 +45,27 @@ body {
     margin-right: 1rem;
 }
 
+/*tracks all the elements whose font size we 
+want to change with the dropdown so that sizeList
+in js works*/
+.normal-text {
+    font-family: Helvetica, sans-serif;
+}
+
 .content {
     grid-area: contentinfo;
+}
+
+.large {
+    font-size: 20pt;
+}
+
+.medium {
+    font-size: 16pt;
+}
+
+.small {
+    font-size: 12pt;
 }
 
 .content-grid {
@@ -85,8 +106,13 @@ body {
 .nav-burger span {
         display: block;
         height: 3px;
-        background-color: #333;
+        background-color: white;
         border-radius: 2px;
+}
+
+.nav-burger:hover {
+    cursor: grab;
+    background-color: #065187;
 }
 
 @media (max-width: 768px) {
