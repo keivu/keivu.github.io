@@ -1,0 +1,279 @@
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #9AD4FE;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-areas:
+        " main-bar  main-bar"
+        " nav-bar   contentinfo";
+}
+
+.main-bar {
+    grid-area: main-bar;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10%;
+    align-items: center;
+    padding: 1rem;
+    background: #025FA2;
+}
+
+.org-name {
+    font-size: 24pt;
+    color: #FA9EC4;
+}
+
+.searchbar {
+    height: 1rem;
+    width: 20rem;
+}
+
+.dropdown {
+    display: flex;
+    color: #FA9EC4;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-bar {
+    grid-area: nav-bar;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    background: #FDD8E8;
+    margin-right: 1rem;
+}
+
+/*tracks all the elements whose font size we 
+want to change with the dropdown so that sizeList
+in js works*/
+.normal-text {
+    font-family: Helvetica, sans-serif;
+}
+
+a {
+    color:navy;
+}
+
+a:hover {
+    color: #5dbbfd;
+}
+
+a:visited {
+    color: #D50B5F;
+}
+
+.content {
+    grid-area: contentinfo;
+}
+
+.large {
+    font-size: 20pt;
+}
+
+.medium {
+    font-size: 16pt;
+}
+
+.small {
+    font-size: 12pt;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.join-button {
+    border-radius: 5px;
+    border-color: white;
+    background-color: rgb(27, 120, 27);
+    width: 50rem;
+    height: 5rem;
+    margin: 1rem;
+    font-size: 24pt;
+    color: #FDD8E8;
+}
+
+button:hover {
+    background-color:rgb(18, 103, 18);
+}
+
+.join-modal {
+    display:none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
+
+.image-card {
+    border: 2px solid black;
+    background: white;
+    padding: 1rem;
+    display: grid;
+    grid-template-areas:
+        "image  a-link"
+        "image  eventinfo";
+    font-size: clamp(1rem, 2.5vw, 2rem);
+}
+
+.image-size {
+    height: 15rem;
+    grid-area: image;
+    align-items: center;
+}
+
+.event-links {
+    font-size: 16pt;
+    grid-area: a-link;
+    padding-left: 1rem;
+}
+
+.event-content {
+    grid-area: eventinfo;
+    padding-left: 1rem
+}
+
+.nav-burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 24px;
+        background: none;
+        border: none;
+        padding: 0;
+}
+
+.nav-burger span {
+        display: block;
+        height: 3px;
+        background-color: white;
+        border-radius: 2px;
+}
+
+.nav-burger:hover {
+    cursor: grab;
+    background-color: #065187;
+}
+
+@media (max-width: 768px) {
+    .main-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-bar {
+        display: grid;
+        grid-template-areas:
+        "orgname"
+        "search"
+        "drop"
+        "nav-burger";
+        place-content: center;
+        place-items: center;
+        gap: 1.5rem;
+    }
+
+    .org-name {
+        grid-area: orgname;
+        text-align: center;
+    }
+
+    .dropdown {
+        grid-area: drop;
+    }
+
+    .searchbar {
+        grid-area: search;
+        width: 80%;
+    }
+
+    .nav-burger {
+        grid-area: nav-burger;
+    }
+
+    .content-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        width: auto;
+    }
+
+    .nav-bar {
+        margin: 0;
+        align-items: center;
+        gap: 1rem;
+        
+    }
+
+    .join-button {
+        width: auto;
+    }
+
+    .image-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin: 1rem;
+        width: clamp(300px, 95%, 700px);
+    }
+
+    .image-size {
+        align-content: center;
+        width: clamp(300px, 80%, 600px);
+        height: auto;
+    }
+
+    .event-content {
+        text-align: center;
+        padding: 0;
+    }
+
+    .event-links {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .main-grid {
+        margin: 0;
+        gap:0;
+        padding: 0;
+    }
+    .content {
+        gap: 0;
+        margin: 0;
+    }
+
+    .image-card {
+        width: clamp(50px, 100%, 350px);
+        gap: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .image-size {
+        width: clamp(45px, 80%, 300px);
+    }
+
+    
+}
