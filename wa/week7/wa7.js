@@ -1,10 +1,26 @@
 const navbar = document.querySelector('.nav-bar');
 const navBurger = document.querySelector('#nav-expand-button');
 const mainGrid = document.querySelector('.main-grid');
-const font_dropdown = document.querySelector("#font-selector")
+const font_dropdown = document.querySelector("#font-selector");
+const joinBtn = document.querySelector('#join-button');
+const modal = document.querySelector(".modal")
+const modal_button = document.querySelector("#modalButton")
 
 localStorage.setItem('font-size', "small");
 let displayed = true;
+
+
+window.onload = function() {
+    modal.style.display = "block";
+    this.localStorage.setItem("email", "nothing")
+}
+
+modal_button.addEventListener("click", (e) => {
+    localStorage.setItem("privacyAccepted", true)
+    modal.style.display = "none"
+})
+
+
 
 navBurger.addEventListener('click', (e) => {
     if (displayed == false) {
@@ -40,3 +56,15 @@ font_dropdown.addEventListener('change', (e) => {
 
     applyFontSize();
 })
+
+joinBtn.addEventListener("click", (e) => {
+    if (localStorage.getItem("email") == "nothing") {
+        email = prompt("Enter Email to Sign Up to Our Newsletter:", "example@gmail.com")
+        localStorage.setItem('email', email)
+    }
+    else {
+        alert("Already Signed Up")
+    }
+} )
+
+
