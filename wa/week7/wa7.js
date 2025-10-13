@@ -12,7 +12,8 @@ let displayed = true;
 
 window.onload = function() {
     modal.style.display = "block";
-    this.localStorage.setItem("email", "nothing")
+    this.localStorage.setItem("email", "nothing");
+    modal.focus();
 }
 
 modal_button.addEventListener("click", (e) => {
