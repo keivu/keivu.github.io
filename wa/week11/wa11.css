@@ -1,0 +1,36 @@
+.weather_page {
+    display: flex;
+    flex-direction: column;
+    background: tan;
+}
+
+.city_dropdown {
+    width: 20rem;
+    height: 3rem;
+    border: 3px black solid;
+    margin: 1rem; 
+    padding: 1rem;
+    background: white;
+}
+ 
+.hourly_box {
+    display: flex;
+    flex-direction: row;
+    border: 3px black solid;
+    border-radius: 50px;
+    height: 10rem;
+    padding: 3rem;
+    margin: 1rem;
+    background: red;
+}
+
+.daily {
+    display: flex;
+    flex-direction: row;
+    border: 3px black solid;
+    border-radius: 50px;
+    height: 10rem;
+    padding: 3rem;
+    margin: 1rem;
+    background: blue;
+}
